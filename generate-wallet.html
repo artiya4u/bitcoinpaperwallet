@@ -10514,6 +10514,7 @@ Bitcoin.Util = {
 						<span id="instructions2">
                         <p style="margin-top: 0;"><strong>Change your wallet's design, language, or cryptocurrency here:</strong>
                           <select name="designPicker" id="designPicker" style="font-size: 12px;" onChange="setDesign(this.value, false);">
+							<option value="coinmax">coinmax</option>
                             <option value="default">Standard Bitcoin Design</option>
                             <option value="bitcoincash">Bitcoin Cash Design</option>
                             <option value="blackwhite">Black &amp; White Bitcoin</option>
@@ -13790,7 +13791,7 @@ function setDesign (whichDesign, isOnLoad, whichLanguage) {
 	
 	drawOpts.text = translations[whichLanguage];
 
-	if (!whichDesign) whichDesign = 'default';	
+	if (!whichDesign) whichDesign = 'coinmax';
 
 	// show the language menu if we're using the default design
 	if (whichDesign == 'default') {
